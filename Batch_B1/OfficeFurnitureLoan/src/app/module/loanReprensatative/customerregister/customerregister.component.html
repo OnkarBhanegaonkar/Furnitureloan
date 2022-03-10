@@ -1,0 +1,209 @@
+<p>customerregister works!</p>
+
+<h5 style="color:blue">CUSTOMER DETAILS</h5>
+<div class="container">
+
+<form [formGroup]="customerDetailsForm" (ngSubmit)="saveData()" >
+
+       <div class="form-row">
+         <div class="form-group col-md-6">
+           <input  type="hidden" class="form-control" formControlName="cid" placeholder="customer ID">
+         </div>
+
+         <div class="form-group">
+          <label for="inputAddress">CIBIL SCORE</label>
+          <input type="text" class="form-control" formControlName="cibilscore" placeholder="cibilscore">
+        </div>
+
+         <div class="form-group col-md-6">
+           <label for="inputPassword4">CUSTOMER NAME</label>
+           <input type="text" class="form-control" formControlName="name" placeholder="customer name">
+         </div>
+       </div>
+
+       <div class="form-row">
+           <div class="form-group col-md-6">
+             <label for="inputEmail4">DATE OF BIRTH</label>
+             <input  type="text" class="form-control" formControlName="dob" placeholder="customer DOB">
+           </div>
+           <div class="form-group col-md-6">
+             <label for="inputPassword4">CUSTOMER AGE</label>
+             <input type="text" class="form-control" formControlName="age" placeholder="customer age">
+           </div>
+           <div class="form-group col-md-6">
+               <label for="inputPassword4">CUSTOMER GENDER</label>
+               <input type="text" class="form-control" formControlName="gender" placeholder="customer gender">
+             </div>
+         </div>
+
+       <div class="form-group">
+         <label for="inputAddress">Email</label>
+         <input type="text" class="form-control" formControlName="email" placeholder="Email">
+       </div>
+
+       <div class="form-row">
+           <div class="form-group col-md-6">
+             <label for="inputEmail4">CUSTOMER MOBNO</label>
+             <input  type="text" class="form-control" formControlName="mobileno" placeholder="customer mobile no">
+           </div>
+           <div class="form-group col-md-6">
+             <label for="inputPassword4">ALTERNATE MOBNO</label>
+             <input type="text" class="form-control" formControlName="alternatemobileno" placeholder="customer alternate mobile no">
+           </div>
+         </div>
+
+          <div class="form-group col-md-6">
+             <label for="inputPassword4">LOAN AMOUNT</label>
+             <input type="text" class="form-control" formControlName="loanAmaount" placeholder="loan amount">
+           </div>
+
+         <div class="form-group">
+           <label for="inputAddress">DURATION</label>
+           <input type="text" class="form-control" formControlName="duration" placeholder="duration">
+         </div>
+     
+         
+
+<h3 style="color: blue">CUSTOMER ADDRESS</h3>
+
+         <div formGroupName="customeraddress">
+            <div class="form-group col-md-4">
+                <label for="inputState">STATE</label>
+                <select id="inputState" class="form-control" formControlName="state" >
+                  <option selected>maharashtra</option>
+                  <option>gujrat</option>
+                  <option>rajsthan</option>
+                </select>
+              </div>
+
+       <div class="form-row">
+         <div class="form-group col-md-6">
+           <label for="inputCity">DISTRICT</label>
+           <input type="text" class="form-control" formControlName="district" placeholder="district" >
+         </div>
+         
+         <div class="form-group col-md-2">
+           <label for="inputZip">PINCODE</label>
+           <input type="text" class="form-control" formControlName="pincode" placeholder="pincode">
+         </div>
+       </div>
+     
+       <div class="form-group">
+           <label for="inputAddress">AREANAME</label>
+           <input type="text" class="form-control" formControlName="areaName" placeholder="areaname`">
+         </div>
+
+         <div class="form-group">
+            <label for="inputAddress">CITYNAME</label>
+            <input type="text" class="form-control" formControlName="cityName" placeholder="cityname`">
+          </div>
+        
+       </div>
+       
+        
+<h3 style="color:blue"> BUISENESS DETAILS</h3>
+
+         <div formGroupName="businessDetails">
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">BUISENESS NAME</label>
+                <input type="text" class="form-control" formControlName="businessName" placeholder="businessName">
+              </div>
+           <div class="form-group col-md-6">
+             <label for="inputPassword4">BANK NAME</label>
+             <input type="text" class="form-control" formControlName="bankName" placeholder="bankName">
+           </div>
+            <div class="form-group col-md-6">
+             <label for="inputPassword4">BRANCH NAME</label>
+             <input type="text" class="form-control" formControlName="branchName" placeholder="branchName">
+           </div> 
+
+            <div class="form-group col-md-6">
+             <label for="inputPassword4">ACCOUNT NO</label>
+             <input type="text" class="form-control" formControlName="accountNo" placeholder="accountNo">
+           </div>     
+           <div class="form-group col-md-6">
+            <label for="inputPassword4">IFSC CODE</label>
+            <input type="text" class="form-control" formControlName="ifscCode" placeholder="ifscCode">
+          </div>
+           <div class="form-group col-md-6">
+            <label for="inputPassword4">TURNOVER</label>
+            <input type="text" class="form-control" formControlName="turnOver" placeholder="turnOver">
+          </div> 
+
+           <div class="form-group col-md-6">
+            <label for="inputPassword4">ADDRESS</label>
+            <input type="text" class="form-control" formControlName="address" placeholder="address">
+          </div>        
+            </div>
+        
+    
+    
+<h3 style="color: blue"> PROPERTY INFORMATION</h3>
+         <div formGroupName="propertyDetails">
+          <div class="form-group col-md-6">
+             <label for="inputPassword4">PROPRETY TYPE</label>
+             <input type="text" class="form-control" formControlName="propertytype" placeholder="propertytype">
+           </div>
+            <div class="form-group col-md-6">
+             <label for="inputPassword4">AREA NAME</label>
+             <input type="text" class="form-control" formControlName="areaname" placeholder="areaname">
+           </div> 
+
+            <div class="form-group col-md-6">
+             <label for="inputPassword4">CITY NAME</label>
+             <input type="text" class="form-control" formControlName="cityname" placeholder="cityname">
+           </div> 
+          
+            <div class="form-group col-md-6">
+             <label for="inputPassword4">PROPERTY PRICE</label>
+             <input type="text" class="form-control" formControlName="propertyprice" placeholder="propertyprice">
+           </div>
+           <div class="form-group col-md-6">
+             <label for="inputPassword4">CONSTRUCTION PRICE</label>
+             <input type="text" class="form-control" formControlName="constructionprice" placeholder="constructionprice">
+           </div> 
+                   
+          </div>
+       
+
+
+<h3 style="color:rgb(255, 136, 0)">GUARANTORS DETAILS</h3>
+
+
+             <div formGroupName="guarantor">
+               <div class="form-group">
+                 <input type="hidden" class="form-control" formControlName="gid" placeholder="gid">
+               </div>
+               <div class="form-group">
+                 <label for="inputAddress">GUARANTORS NAME</label>
+                 <input type="text" class="form-control" formControlName="name" placeholder="name">
+               </div>
+               <div class="form-row">
+                 <div class="form-group col-md-6">
+                   <label for="inputPassword4">DATE TO BIRTH</label>
+                   <input type="text" class="form-control" formControlName="dob" placeholder="dob">
+                 </div>
+                 <div class="form-group col-md-6">
+                   <label for="inputPassword4">MOBILE NO</label>
+                   <input type="text" class="form-control" formControlName="mobileNo" placeholder="mobileNo">
+               </div>
+             </div>
+             <div class="form-group">
+               <label for="inputAddress"> GENDER</label>
+               <input type="text" class="form-control" formControlName="gender" placeholder="gender">
+             </div>
+             <div class="form-group">
+               <label for="inputAddress">EMAIL ID</label>
+               <input type="text" class="form-control" formControlName="emailId" placeholder="emailId">
+             </div>
+             <div class="form-group">
+               <label for="inputAddress">ADHAR NO</label>
+               <input type="text" class="form-control" formControlName="adharNo" placeholder="adharNo">
+             </div>
+             
+              </div> 
+<button type="submit" class="btn btn-success" value="submit">Register</button>
+     </form>
+   </div>
+
+  

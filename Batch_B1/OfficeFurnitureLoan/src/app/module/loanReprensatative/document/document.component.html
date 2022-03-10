@@ -1,0 +1,71 @@
+<p>document works!</p>
+
+
+<form [formGroup]="docForm" (ngSubmit)="save()">
+    <div class="container" style="width: min-content;">
+ <table class="table table-striped table-dark" style="margin: auto;">
+    <tr>
+       <th>CustomerId</th>
+       <td><input type="text" formControlName="cid"></td>
+    </tr>
+    <tr>
+      <th>Address proof</th>
+      <td><input type="file" (change)="onselectedFile1($event)">
+      </td>
+   </tr>
+   <tr>
+      <th>Pancard</th>
+      <td> <input type="file" (change)="onselectedFile2($event)"></td>
+   </tr>
+   <tr>
+      <th>ITR</th>
+      <td><input type="file" (change)="onselectedFile3($event)"></td>
+   </tr>
+   <tr>
+      <th>AdharCard</th>
+      <td><input type="file" (change)="onselectedFile4($event)"></td>
+   </tr>
+   <tr>
+      <th>Photo</th>
+      <td><input type="file" (change)="onselectedFile5($event)"></td>
+   </tr>
+   <tr>
+      <th>Signature</th>
+      <td><input type="file" (change)="onselectedFile6($event)"></td>
+   </tr>
+   <tr>
+      <th>Thumb Imprssion</th>
+      <td><input type="file" (change)="onselectedFile7($event)"></td>
+   </tr>
+   <tr>
+      <th>Bank Cheque</th>
+      <td><input type="file" (change)="onselectedFile8($event)"></td>
+   </tr>
+   <tr>
+      <th>BankStatement</th>
+      <td><input type="file" (change)="onselectedFile9($event)"></td>
+   </tr>
+   
+   <!-- <tr>
+    <th>STATUS</th>
+    <input type="text" formControlName="status" placeholder="status">
+</tr> -->
+ 
+<tr>
+    <th>STATUS</th>
+<select id="inputstatus" formControlName="status" >
+    <option selected>status</option>
+    <option>Approved</option>
+    <option>Rejected</option>
+  </select>
+</tr>
+   
+           
+   </table><br>
+   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+   <button type="submit" class="btn btn-success"  value="submit">Submit</button>    
+</div>
+
+ 
+   </form>
+ 

@@ -1,0 +1,57 @@
+<p>update works!</p>
+
+
+
+<form [formGroup]="updateForm" (ngSubmit)="onSubmit()"> 
+ 
+    <table class="table table-dark" align="center" style="text-align: center;width: 400px;"> 
+        <tr> 
+            <td> Customer Name</td> 
+            <td> <input type="text" formControlName="name" placeholder="Enter Name"></td> 
+        </tr>
+        <tr> 
+            <td> Date Of Birth</td> 
+            <td> <input type="text" formControlName="dob" placeholder="Enter DOB"></td> 
+        </tr>
+        <tr> 
+            <td> Age</td> 
+            <td> <input type="text" formControlName="age" placeholder="Enter Age"></td> 
+        </tr>
+        <tr> 
+            <td> Gender</td> 
+            <td> <input type="text" formControlName="gender" placeholder="Enter gender"></td> 
+        </tr>
+        <tr> 
+            <td> Email</td> 
+            <td> <input type="text" formControlName="email" placeholder="Enter Email"></td> 
+        </tr>
+        <tr>
+            <td> Mobile Number</td> 
+            <td> <input type="text" formControlName="mobileno" placeholder="Enter Mobile number"></td> 
+        </tr>
+        <tr> 
+            <td> PAN Card Number</td> 
+            <td> <input type="text" formControlName="pancardno" placeholder="Enter PAN Card Number"></td> 
+        </tr>                  
+        <tr > 
+            <td> Adhar Card Number</td>
+             <td> <input type="text" formControlName="adharcardno" placeholder="Enter Adhar Card Number"></td> 
+        </tr> 
+        <tr > 
+            <td> Cibil Score</td>
+             <td> <input type="text" formControlName="cibil" ></td> 
+        </tr>
+        <tr>           
+                <td> Status </td>
+                <td><input type="text" formControlName="status"></td> 
+        </tr>
+         
+    </table>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        
+    <button align="center" class="btn btn-primary" type="submit">Submit</button>&nbsp; &nbsp;
+   </form>
+
+   <button align="center" class="btn btn-primary" type="submit" (click)="generatecibilscore()">Generate Cibil Score</button>&nbsp; &nbsp;
+         {{cibill}}
+  
+
